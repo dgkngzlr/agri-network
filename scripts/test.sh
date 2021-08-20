@@ -18,6 +18,7 @@ echo "###########################Transferred#########################"
 echo "###############################################################"
 echo "---> ASSET_ID: Onion1 transferred From: Supplier1 To: Producer1"
 peer chaincode invoke -o orderer.agri-network.com:7050 --tls true --cafile $ORDERER_CA -C channeldemo -n basic --peerAddresses peer0.supplier.agri-network.com:7051 --tlsRootCertFiles $PEER_SUPPLIER_TLSROOTCERTFILES --peerAddresses peer0.producer.agri-network.com:7051 --tlsRootCertFiles $PEER_PRODUCER_TLSROOTCERTFILES --peerAddresses peer0.deliverer.agri-network.com:7051 --tlsRootCertFiles $PEER_DELIVERER_TLSROOTCERTFILES --peerAddresses peer0.retailer.agri-network.com:7051 --tlsRootCertFiles $PEER_RETAILER_TLSROOTCERTFILES -c '{"function":"TransferToProducer","Args":["Onion1"]}'
+sleep 2
 echo "---> Query result :"
 peer chaincode invoke -o orderer.agri-network.com:7050 --tls true --cafile $ORDERER_CA -C channeldemo -n basic --peerAddresses peer0.supplier.agri-network.com:7051 --tlsRootCertFiles $PEER_SUPPLIER_TLSROOTCERTFILES --peerAddresses peer0.producer.agri-network.com:7051 --tlsRootCertFiles $PEER_PRODUCER_TLSROOTCERTFILES --peerAddresses peer0.deliverer.agri-network.com:7051 --tlsRootCertFiles $PEER_DELIVERER_TLSROOTCERTFILES --peerAddresses peer0.retailer.agri-network.com:7051 --tlsRootCertFiles $PEER_RETAILER_TLSROOTCERTFILES -c '{"function":"ReadAsset","Args":["Onion1"]}'
 sleep 5
@@ -26,6 +27,7 @@ echo "###########################Transferred#########################"
 echo "###############################################################"
 echo "---> ASSET_ID: Onion1 transferred From: Producer1 To: Deliverer1"
 peer chaincode invoke -o orderer.agri-network.com:7050 --tls true --cafile $ORDERER_CA -C channeldemo -n basic --peerAddresses peer0.supplier.agri-network.com:7051 --tlsRootCertFiles $PEER_SUPPLIER_TLSROOTCERTFILES --peerAddresses peer0.producer.agri-network.com:7051 --tlsRootCertFiles $PEER_PRODUCER_TLSROOTCERTFILES --peerAddresses peer0.deliverer.agri-network.com:7051 --tlsRootCertFiles $PEER_DELIVERER_TLSROOTCERTFILES --peerAddresses peer0.retailer.agri-network.com:7051 --tlsRootCertFiles $PEER_RETAILER_TLSROOTCERTFILES -c '{"function":"TransferToDeliverer","Args":["Onion1"]}'
+sleep 2
 echo "---> Query result :"
 peer chaincode invoke -o orderer.agri-network.com:7050 --tls true --cafile $ORDERER_CA -C channeldemo -n basic --peerAddresses peer0.supplier.agri-network.com:7051 --tlsRootCertFiles $PEER_SUPPLIER_TLSROOTCERTFILES --peerAddresses peer0.producer.agri-network.com:7051 --tlsRootCertFiles $PEER_PRODUCER_TLSROOTCERTFILES --peerAddresses peer0.deliverer.agri-network.com:7051 --tlsRootCertFiles $PEER_DELIVERER_TLSROOTCERTFILES --peerAddresses peer0.retailer.agri-network.com:7051 --tlsRootCertFiles $PEER_RETAILER_TLSROOTCERTFILES -c '{"function":"ReadAsset","Args":["Onion1"]}'
 sleep 5
@@ -34,6 +36,7 @@ echo "###########################Transferred#########################"
 echo "###############################################################"
 echo "---> ASSET_ID: Onion1 transferred From: Deliverer1 To: Retailer"
 peer chaincode invoke -o orderer.agri-network.com:7050 --tls true --cafile $ORDERER_CA -C channeldemo -n basic --peerAddresses peer0.supplier.agri-network.com:7051 --tlsRootCertFiles $PEER_SUPPLIER_TLSROOTCERTFILES --peerAddresses peer0.producer.agri-network.com:7051 --tlsRootCertFiles $PEER_PRODUCER_TLSROOTCERTFILES --peerAddresses peer0.deliverer.agri-network.com:7051 --tlsRootCertFiles $PEER_DELIVERER_TLSROOTCERTFILES --peerAddresses peer0.retailer.agri-network.com:7051 --tlsRootCertFiles $PEER_RETAILER_TLSROOTCERTFILES -c '{"function":"TransferToRetailer","Args":["Onion1"]}'
+sleep 2
 echo "---> Query result :"
 peer chaincode invoke -o orderer.agri-network.com:7050 --tls true --cafile $ORDERER_CA -C channeldemo -n basic --peerAddresses peer0.supplier.agri-network.com:7051 --tlsRootCertFiles $PEER_SUPPLIER_TLSROOTCERTFILES --peerAddresses peer0.producer.agri-network.com:7051 --tlsRootCertFiles $PEER_PRODUCER_TLSROOTCERTFILES --peerAddresses peer0.deliverer.agri-network.com:7051 --tlsRootCertFiles $PEER_DELIVERER_TLSROOTCERTFILES --peerAddresses peer0.retailer.agri-network.com:7051 --tlsRootCertFiles $PEER_RETAILER_TLSROOTCERTFILES -c '{"function":"ReadAsset","Args":["Onion1"]}'
 sleep 2
