@@ -1,0 +1,42 @@
+OrdererOrgs:
+  - Name: OrderingService
+    Domain: agri-network.com
+    Specs:
+      - Hostname: orderer
+
+PeerOrgs:
+  - Name: Supplier
+    Domain: supplier.agri-network.com
+    EnableNodeOUs: true
+    Template:
+      Count: 1
+
+    Users: 
+      Count: 1
+      
+  - Name: Producer
+    Domain: producer.agri-network.com
+    EnableNodeOUs: true
+    Template:
+      Count: 1
+
+    Users: 
+      Count: 1
+
+  - Name: Deliverer
+    Domain: deliverer.agri-network.com
+    EnableNodeOUs: true
+    Template:
+      Count: 1
+
+    Users: 
+      Count: 1
+
+  - Name: Retailer
+    Domain: retailer.agri-network.com
+    EnableNodeOUs: true
+    Template:
+      Count: 1
+
+    Users: 
+      Count: 1
